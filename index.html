@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoni Levy | Graphic Design for Musicians</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ─── Reset & Base ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:    #1f1f1f;
+      --white:    #ffffff;
+      --gray:     #8f8f8f;
+      --light:    #f2f2f2;
+      --font:     'Josefin Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      color: var(--black);
+      background: var(--white);
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── Header / Nav ─── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      padding: 0 40px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-wrap img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .logo-name {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--black);
+      line-height: 1;
+      -webkit-text-stroke: 0.5px var(--black);
+    }
+
+    .logo-sub {
+      font-size: 7px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #555555;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gray);
+      transition: color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--black);
+    }
+
+    /* ─── Gallery Grid (Home) ─── */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    /* ─── Quote Section ─── */
+    .quote-section {
+      background: var(--black);
+      padding: 90px 60px;
+      text-align: center;
+    }
+
+    .quote-text {
+      font-size: clamp(18px, 2.8vw, 32px);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+      text-transform: uppercase;
+      color: var(--gray);
+      max-width: 860px;
+      margin: 0 auto 20px;
+    }
+
+    .quote-text .highlight {
+      color: var(--white);
+    }
+
+    .quote-attr {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    /* ─── Contact Section ─── */
+    .contact-section {
+      padding: 80px 40px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .contact-section h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      font-family: var(--font);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--black);
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #d0d0d0;
+      padding: 14px 4px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 10px;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-bottom-color: var(--black);
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 100px;
+      margin-top: 10px;
+    }
+
+    .send-btn {
+      margin-top: 28px;
+      align-self: flex-start;
+      background: none;
+      border: 1px solid var(--black);
+      font-family: var(--font);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--black);
+      padding: 10px 28px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .send-btn:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /* ─── Clients Section ─── */
+    .clients-section {
+      background: var(--light);
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .clients-section h3 {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 40px;
+    }
+
+    .clients-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px 60px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .clients-grid img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: opacity 0.2s, filter 0.2s;
+    }
+
+    .clients-grid img:hover {
+      opacity: 1;
+      filter: grayscale(0%);
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--white);
+      border-top: 1px solid rgba(0,0,0,0.07);
+      padding: 22px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copy {
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .social-links a {
+      color: var(--gray);
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover {
+      color: var(--black);
+    }
+
+    .social-links svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 768px) {
+      header {
+        padding: 0 20px;
+        height: 60px;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 14px 20px;
+        gap: 12px;
+      }
+
+      nav {
+        gap: 18px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .quote-section {
+        padding: 60px 28px;
+      }
+
+      .clients-grid {
+        gap: 28px 36px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="logo-wrap">
+      <img
+        src="images/6679be_168b0210bdae4201a99ed5335b2d316b~mv2.png"
+        alt="Yoni Levy Logo"
+      >
+      <div class="logo-text">
+        <span class="logo-name">YONi levy</span>
+        <span class="logo-sub">Graphic Design<br>for Musicians</span>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="ads.html">Concert Ads</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ── Portfolio Gallery ── -->
+  <section class="gallery">
+    <div class="gallery-item"><img src="images/6679be_9b240345dfe04234947ca0f1b034068f~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_0feae19581a74f39af1a227473d0400b~mv2.png" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_21e51a42bdb9452996d3323989a8e359~mv2.png" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_4377e5f72cff41e186b7c87cb57269e5~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_9101f75f5d3a4b9c835eee45f856d4d3~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_8718ef643dc54f6cacb912627675c4c2~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_73e8c120887f4115b1ed534066514f61~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_db2e963bca744e74807ceb1aefe632b1~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_db91f8ce6e284e3894fffbee2f594456~mv2.png" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_f9602f66714d496f8a0350390e657594~mv2.png" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_80e3d7ec86cd43478fcda5b3921a668c~mv2.png" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_6b773a6bf52d40c790d89c5a26b716db~mv2.png" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_aaebf68e028f4b1aaff95433f359a2ca~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_b66ad990c15a47d68e205b2b445bcc4a~mv2.png" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_5f43cb1e0b274b5f880efbf20cea3c47~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_ec29dcfdb9924346991922d38f5d3fa0~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_0c831f45f18544748edc2e164d15b27e~mv2.png" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_1fe0a554e9944f7792122b854f87dd53~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_ff901a9221e64ee998cba3d51ed09da5~mv2.png" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_91c3b7ae1aa1458cb8a458514aa7bc72~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_b0fb2242b31f43aab48f1db84e86d725~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_0f39a4a548ad4dda9055919c04883626~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_e480d3601397410a9320117ebe2f8d38~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_25cbd11e124f4c4c89a49cd505422d7f~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_cec8edf07c05499a9822497f42ec613b~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_68f021a1c7534c0dbc2395736cf8249f~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_d33f208f498540b48d38bb9249abe1b5~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_72b61c1845dd4752aed100f51080ad4d~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_0962391a3045494d878aeef73b725cc7~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_81991fcc0e1742c6a758e946cd79fc36~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_5e50b03d77c148cabf1d6933697c1056~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_787138cab4b24f2b931523d9756cce71~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_e1092252e36a40ecb2472fd47904ca2c~mv2.png" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_ae64d729bec0491b93096f112564ec9e~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_b6aef8a897a9479f816c5e7db182a1b6~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_db48dadc9d804677a7799892adc4a515~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+  </section>
+
+  <!-- ── Quote ── -->
+  <section class="quote-section">
+    <p class="quote-text">
+      &ldquo;There are three responses to a piece of design &mdash; yes, no, and WOW!
+      <span class="highlight">Wow is the one to aim for.&rdquo;</span>
+    </p>
+    <p class="quote-attr">— Milton Glaser</p>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section class="contact-section" id="contact">
+    <h2>Keep in touch</h2>
+    <!--
+      To activate this form:
+      1. Go to https://formspree.io and create a free account
+      2. Create a new form and copy your form ID
+      3. Replace YOUR_FORM_ID below with your actual ID
+    -->
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/YOUR_FORM_ID"
+      method="POST"
+    >
+      <input type="text"  name="name"    placeholder="Name"                        required>
+      <input type="email" name="email"   placeholder="Email"                       required>
+      <input type="text"  name="subject" placeholder="Subject">
+      <textarea           name="message" placeholder="Type your message here...">  </textarea>
+      <button class="send-btn" type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- ── Clients ── -->
+  <section class="clients-section">
+    <h3>Some of My Dear Clients</h3>
+    <div class="clients-grid">
+      <img src="images/6679be_66bf0f6387d248338f875d57fdb09a69~mv2.png" alt="NMC">
+      <img src="images/6679be_be211a36ea324877be00d99c1229ab22~mv2.png" alt="Hed Arzi">
+      <img src="images/6679be_08d8d2409035449f921f3bababe63cde~mv2.png" alt="NMC Live">
+      <img src="images/6679be_bf0f5d7fff08464694f7f0b07463b327~mv2.png" alt="Aroma Music">
+      <img src="images/6679be_306166ddb26c4a55819300c9b46f84a4~mv2.png" alt="Kaspit">
+      <img src="images/6679be_172111be9be94bfe974ee9584edd8d39~mv2.png" alt="Yahalom">
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p class="footer-copy">©2025 by Yoni Levy. All rights Reserved.</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/yonileelevy" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/ynilvy/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>

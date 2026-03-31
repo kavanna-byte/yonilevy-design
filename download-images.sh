@@ -1,0 +1,87 @@
+#!/bin/bash
+# הורדת כל תמונות האתר מ-Wix CDN לתיקייה מקומית
+# הרץ מתוך תיקיית הפרויקט: bash download-images.sh
+
+set -e
+mkdir -p images
+
+BASE="https://static.wixstatic.com/media"
+
+echo "⬇️  מוריד תמונות..."
+
+curl -s -L "$BASE/6679be_168b0210bdae4201a99ed5335b2d316b~mv2.png" -o "images/6679be_168b0210bdae4201a99ed5335b2d316b~mv2.png"
+
+# ── Home Gallery ──
+curl -s -L "$BASE/6679be_9b240345dfe04234947ca0f1b034068f~mv2.jpg"  -o "images/6679be_9b240345dfe04234947ca0f1b034068f~mv2.jpg"
+curl -s -L "$BASE/6679be_0feae19581a74f39af1a227473d0400b~mv2.png"  -o "images/6679be_0feae19581a74f39af1a227473d0400b~mv2.png"
+curl -s -L "$BASE/6679be_21e51a42bdb9452996d3323989a8e359~mv2.png"  -o "images/6679be_21e51a42bdb9452996d3323989a8e359~mv2.png"
+curl -s -L "$BASE/6679be_4377e5f72cff41e186b7c87cb57269e5~mv2.jpg"  -o "images/6679be_4377e5f72cff41e186b7c87cb57269e5~mv2.jpg"
+curl -s -L "$BASE/6679be_9101f75f5d3a4b9c835eee45f856d4d3~mv2.jpg"  -o "images/6679be_9101f75f5d3a4b9c835eee45f856d4d3~mv2.jpg"
+curl -s -L "$BASE/6679be_8718ef643dc54f6cacb912627675c4c2~mv2.jpg"  -o "images/6679be_8718ef643dc54f6cacb912627675c4c2~mv2.jpg"
+curl -s -L "$BASE/6679be_73e8c120887f4115b1ed534066514f61~mv2.jpg"  -o "images/6679be_73e8c120887f4115b1ed534066514f61~mv2.jpg"
+curl -s -L "$BASE/6679be_db2e963bca744e74807ceb1aefe632b1~mv2.jpg"  -o "images/6679be_db2e963bca744e74807ceb1aefe632b1~mv2.jpg"
+curl -s -L "$BASE/6679be_db91f8ce6e284e3894fffbee2f594456~mv2.png"  -o "images/6679be_db91f8ce6e284e3894fffbee2f594456~mv2.png"
+curl -s -L "$BASE/6679be_f9602f66714d496f8a0350390e657594~mv2.png"  -o "images/6679be_f9602f66714d496f8a0350390e657594~mv2.png"
+curl -s -L "$BASE/6679be_80e3d7ec86cd43478fcda5b3921a668c~mv2.png"  -o "images/6679be_80e3d7ec86cd43478fcda5b3921a668c~mv2.png"
+curl -s -L "$BASE/6679be_6b773a6bf52d40c790d89c5a26b716db~mv2.png"  -o "images/6679be_6b773a6bf52d40c790d89c5a26b716db~mv2.png"
+curl -s -L "$BASE/6679be_aaebf68e028f4b1aaff95433f359a2ca~mv2.jpg"  -o "images/6679be_aaebf68e028f4b1aaff95433f359a2ca~mv2.jpg"
+curl -s -L "$BASE/6679be_b66ad990c15a47d68e205b2b445bcc4a~mv2.png"  -o "images/6679be_b66ad990c15a47d68e205b2b445bcc4a~mv2.png"
+curl -s -L "$BASE/6679be_5f43cb1e0b274b5f880efbf20cea3c47~mv2.jpg"  -o "images/6679be_5f43cb1e0b274b5f880efbf20cea3c47~mv2.jpg"
+curl -s -L "$BASE/6679be_ec29dcfdb9924346991922d38f5d3fa0~mv2.jpg"  -o "images/6679be_ec29dcfdb9924346991922d38f5d3fa0~mv2.jpg"
+curl -s -L "$BASE/6679be_0c831f45f18544748edc2e164d15b27e~mv2.png"  -o "images/6679be_0c831f45f18544748edc2e164d15b27e~mv2.png"
+curl -s -L "$BASE/6679be_1fe0a554e9944f7792122b854f87dd53~mv2.jpg"  -o "images/6679be_1fe0a554e9944f7792122b854f87dd53~mv2.jpg"
+curl -s -L "$BASE/6679be_ff901a9221e64ee998cba3d51ed09da5~mv2.png"  -o "images/6679be_ff901a9221e64ee998cba3d51ed09da5~mv2.png"
+curl -s -L "$BASE/6679be_91c3b7ae1aa1458cb8a458514aa7bc72~mv2.jpg"  -o "images/6679be_91c3b7ae1aa1458cb8a458514aa7bc72~mv2.jpg"
+curl -s -L "$BASE/6679be_b0fb2242b31f43aab48f1db84e86d725~mv2.jpg"  -o "images/6679be_b0fb2242b31f43aab48f1db84e86d725~mv2.jpg"
+curl -s -L "$BASE/6679be_0f39a4a548ad4dda9055919c04883626~mv2.jpg"  -o "images/6679be_0f39a4a548ad4dda9055919c04883626~mv2.jpg"
+curl -s -L "$BASE/6679be_e480d3601397410a9320117ebe2f8d38~mv2.jpg"  -o "images/6679be_e480d3601397410a9320117ebe2f8d38~mv2.jpg"
+curl -s -L "$BASE/6679be_25cbd11e124f4c4c89a49cd505422d7f~mv2.jpg"  -o "images/6679be_25cbd11e124f4c4c89a49cd505422d7f~mv2.jpg"
+curl -s -L "$BASE/6679be_cec8edf07c05499a9822497f42ec613b~mv2.jpg"  -o "images/6679be_cec8edf07c05499a9822497f42ec613b~mv2.jpg"
+curl -s -L "$BASE/6679be_68f021a1c7534c0dbc2395736cf8249f~mv2.jpg"  -o "images/6679be_68f021a1c7534c0dbc2395736cf8249f~mv2.jpg"
+curl -s -L "$BASE/6679be_d33f208f498540b48d38bb9249abe1b5~mv2.jpg"  -o "images/6679be_d33f208f498540b48d38bb9249abe1b5~mv2.jpg"
+curl -s -L "$BASE/6679be_72b61c1845dd4752aed100f51080ad4d~mv2.jpg"  -o "images/6679be_72b61c1845dd4752aed100f51080ad4d~mv2.jpg"
+curl -s -L "$BASE/6679be_0962391a3045494d878aeef73b725cc7~mv2.jpg"  -o "images/6679be_0962391a3045494d878aeef73b725cc7~mv2.jpg"
+curl -s -L "$BASE/6679be_81991fcc0e1742c6a758e946cd79fc36~mv2.jpg"  -o "images/6679be_81991fcc0e1742c6a758e946cd79fc36~mv2.jpg"
+curl -s -L "$BASE/6679be_5e50b03d77c148cabf1d6933697c1056~mv2.jpg"  -o "images/6679be_5e50b03d77c148cabf1d6933697c1056~mv2.jpg"
+curl -s -L "$BASE/6679be_787138cab4b24f2b931523d9756cce71~mv2.jpg"  -o "images/6679be_787138cab4b24f2b931523d9756cce71~mv2.jpg"
+curl -s -L "$BASE/6679be_e1092252e36a40ecb2472fd47904ca2c~mv2.png"  -o "images/6679be_e1092252e36a40ecb2472fd47904ca2c~mv2.png"
+curl -s -L "$BASE/6679be_ae64d729bec0491b93096f112564ec9e~mv2.jpg"  -o "images/6679be_ae64d729bec0491b93096f112564ec9e~mv2.jpg"
+curl -s -L "$BASE/6679be_b6aef8a897a9479f816c5e7db182a1b6~mv2.jpg"  -o "images/6679be_b6aef8a897a9479f816c5e7db182a1b6~mv2.jpg"
+curl -s -L "$BASE/6679be_db48dadc9d804677a7799892adc4a515~mv2.jpg"  -o "images/6679be_db48dadc9d804677a7799892adc4a515~mv2.jpg"
+
+# ── Client Logos ──
+curl -s -L "$BASE/6679be_66bf0f6387d248338f875d57fdb09a69~mv2.png"  -o "images/6679be_66bf0f6387d248338f875d57fdb09a69~mv2.png"
+curl -s -L "$BASE/6679be_be211a36ea324877be00d99c1229ab22~mv2.png"  -o "images/6679be_be211a36ea324877be00d99c1229ab22~mv2.png"
+curl -s -L "$BASE/6679be_08d8d2409035449f921f3bababe63cde~mv2.png"  -o "images/6679be_08d8d2409035449f921f3bababe63cde~mv2.png"
+curl -s -L "$BASE/6679be_bf0f5d7fff08464694f7f0b07463b327~mv2.png"  -o "images/6679be_bf0f5d7fff08464694f7f0b07463b327~mv2.png"
+curl -s -L "$BASE/6679be_306166ddb26c4a55819300c9b46f84a4~mv2.png"  -o "images/6679be_306166ddb26c4a55819300c9b46f84a4~mv2.png"
+curl -s -L "$BASE/6679be_172111be9be94bfe974ee9584edd8d39~mv2.png"  -o "images/6679be_172111be9be94bfe974ee9584edd8d39~mv2.png"
+
+# ── Concert Ads ──
+curl -s -L "$BASE/6679be_0f8e23a1c80d4cdb9bd1dd5e07f3261d~mv2.jpg"  -o "images/6679be_0f8e23a1c80d4cdb9bd1dd5e07f3261d~mv2.jpg"
+curl -s -L "$BASE/6679be_f557aeee90b745a6b099398009c7dfcc~mv2.jpg"  -o "images/6679be_f557aeee90b745a6b099398009c7dfcc~mv2.jpg"
+curl -s -L "$BASE/6679be_a8a8bb9f144344348c7c6ef914cab3f2~mv2.jpg"  -o "images/6679be_a8a8bb9f144344348c7c6ef914cab3f2~mv2.jpg"
+curl -s -L "$BASE/6679be_99cdb6e408a340c8b229edee703a44e5~mv2.png"  -o "images/6679be_99cdb6e408a340c8b229edee703a44e5~mv2.png"
+curl -s -L "$BASE/6679be_1576ed963b914a9f8093dd096e0901a1~mv2.jpg"  -o "images/6679be_1576ed963b914a9f8093dd096e0901a1~mv2.jpg"
+curl -s -L "$BASE/6679be_c4f2e59b4e4944989c2dce6c746badf7~mv2.png"  -o "images/6679be_c4f2e59b4e4944989c2dce6c746badf7~mv2.png"
+curl -s -L "$BASE/6679be_b073b07bf649481fbeb13d6a84dd5e6c~mv2.jpg"  -o "images/6679be_b073b07bf649481fbeb13d6a84dd5e6c~mv2.jpg"
+curl -s -L "$BASE/6679be_faecfd37b0f947ec84c13f743aad1cdb~mv2.jpg"  -o "images/6679be_faecfd37b0f947ec84c13f743aad1cdb~mv2.jpg"
+curl -s -L "$BASE/6679be_737eed3bad6d4536aca4df84a9af214e~mv2.png"  -o "images/6679be_737eed3bad6d4536aca4df84a9af214e~mv2.png"
+curl -s -L "$BASE/6679be_057823f1ca734f16ba5f5b4cab437bd2~mv2.jpg"  -o "images/6679be_057823f1ca734f16ba5f5b4cab437bd2~mv2.jpg"
+curl -s -L "$BASE/6679be_1d8372695bb2432f96062a40e3eb6005~mv2.jpg"  -o "images/6679be_1d8372695bb2432f96062a40e3eb6005~mv2.jpg"
+curl -s -L "$BASE/6679be_25b5843f2006472c8678cf6e0c15a117~mv2.jpg"  -o "images/6679be_25b5843f2006472c8678cf6e0c15a117~mv2.jpg"
+curl -s -L "$BASE/6679be_83c8fbb93da84bb1b4c9ba9a6c5ed905~mv2.jpg"  -o "images/6679be_83c8fbb93da84bb1b4c9ba9a6c5ed905~mv2.jpg"
+curl -s -L "$BASE/6679be_6f82351bd5104d82af7f6c847e90571a~mv2.jpg"  -o "images/6679be_6f82351bd5104d82af7f6c847e90571a~mv2.jpg"
+curl -s -L "$BASE/6679be_23a186b876ae4500a24b117d5d5bcf8f~mv2.jpg"  -o "images/6679be_23a186b876ae4500a24b117d5d5bcf8f~mv2.jpg"
+curl -s -L "$BASE/6679be_f2240be60c984d5fa564b7afccf67a54~mv2.jpg"  -o "images/6679be_f2240be60c984d5fa564b7afccf67a54~mv2.jpg"
+curl -s -L "$BASE/6679be_6feabb295db1405faeb4d3a46ba5a5ce~mv2.jpg"  -o "images/6679be_6feabb295db1405faeb4d3a46ba5a5ce~mv2.jpg"
+curl -s -L "$BASE/6679be_4639bbacb32a4ea49e45ae4084a015a1~mv2.jpg"  -o "images/6679be_4639bbacb32a4ea49e45ae4084a015a1~mv2.jpg"
+curl -s -L "$BASE/6679be_49bc917917f4462db52ca965c332eb1a~mv2.png"  -o "images/6679be_49bc917917f4462db52ca965c332eb1a~mv2.png"
+curl -s -L "$BASE/6679be_1bd16a36e949463f8df476231642f24a~mv2.jpg"  -o "images/6679be_1bd16a36e949463f8df476231642f24a~mv2.jpg"
+curl -s -L "$BASE/6679be_a96d01b40ed54fa080d79a0d6e538d28~mv2.png"  -o "images/6679be_a96d01b40ed54fa080d79a0d6e538d28~mv2.png"
+curl -s -L "$BASE/6679be_85c12458bd9e4d6998094d5bd201d1fe~mv2.png"  -o "images/6679be_85c12458bd9e4d6998094d5bd201d1fe~mv2.png"
+curl -s -L "$BASE/6679be_0b9afaccb70f43b7918eab6dded6d7e9~mv2.jpg"  -o "images/6679be_0b9afaccb70f43b7918eab6dded6d7e9~mv2.jpg"
+curl -s -L "$BASE/6679be_ab2309f321ca4d75804c4bc4434e8d65~mv2.jpg"  -o "images/6679be_ab2309f321ca4d75804c4bc4434e8d65~mv2.jpg"
+curl -s -L "$BASE/6679be_982859a6bfbf4dfa83800c6fbc08e53b~mv2.jpg"  -o "images/6679be_982859a6bfbf4dfa83800c6fbc08e53b~mv2.jpg"
+
+echo "✅ הושלם! $(ls images/ | wc -l) תמונות הורדו לתיקיית images/"
