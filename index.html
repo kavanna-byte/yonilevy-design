@@ -230,6 +230,10 @@
       direction: rtl;
     }
 
+    body.lang-he nav a {
+      font-size: 11px;
+    }
+
     /* ─── Quote Section ─── */
     .quote-section {
       background: var(--black);
@@ -532,7 +536,7 @@
     <div class="about-inner">
       <span class="about-label" id="about-label">About</span>
       <h2 class="about-heading" id="about-heading">Album Design. Music Identity. Israel.</h2>
-      <p class="about-text" id="about-text">Yoni Levy is an Israeli graphic designer specializing in album covers, music visual identity, and concert posters. With over a decade working alongside Israel's leading musicians and record labels — including NMC, Hed Arzi, and Kaspit — Yoni brings each artist's vision to life through bold, expressive design. Every project is approached with personal attention, merging the artist's world with visuals that speak to audiences.</p>
+      <p class="about-text" id="about-text">I've spent over a decade doing one thing: designing for music. Album covers, visual identities, concert campaigns, for some of the most listened-to artists in Israel. I work with people who take their craft seriously, and I take mine just as seriously. Not every project becomes iconic, but every project gets everything I have.</p>
     </div>
   </section>
 
@@ -609,7 +613,7 @@
         'lang-toggle':     'עב',
         'about-label':     'About',
         'about-heading':   'Album Design. Music Identity. Israel.',
-        'about-text':      "Yoni Levy is an Israeli graphic designer specializing in album covers, music visual identity, and concert posters. With over a decade working alongside Israel's leading musicians and record labels — including NMC, Hed Arzi, and Kaspit — Yoni brings each artist's vision to life through bold, expressive design. Every project is approached with personal attention, merging the artist's world with visuals that speak to audiences.",
+        'about-text':      "I've spent over a decade doing one thing: designing for music. Album covers, visual identities, concert campaigns, for some of the most listened-to artists in Israel. I work with people who take their craft seriously, and I take mine just as seriously. Not every project becomes iconic, but every project gets everything I have.",
         'contact-heading': 'Keep in touch',
         'send-btn':        'Send',
         'clients-heading': 'Some of My Dear Clients',
@@ -623,12 +627,12 @@
         'logo-sub':        'עיצוב גרפי<br>לאמנים',
         'nav-home':        'ראשי',
         'nav-about':       'אודות',
-        'nav-ads':         'פרסומות קונצרט',
+        'nav-ads':         'מודעות',
         'nav-contact':     'צור קשר',
         'lang-toggle':     'EN',
         'about-label':     'אודות',
         'about-heading':   'עיצוב אלבומים. זהות מוזיקלית. ישראל.',
-        'about-text':      'יוני לוי הוא מעצב גרפי ישראלי המתמחה בעיצוב אלבומים, עטיפות מוזיקה וזהות ויזואלית לאמנים. עם ניסיון של מעל עשור בתעשיית המוזיקה הישראלית, עיצב יוני עטיפות אלבומים ופוסטרים לאמנים המובילים בישראל — כולל שיתופי פעולה עם נמ״ק, הד ארצי וספקי מוזיקה מובילים נוספים. כל פרויקט מקבל גישה אישית ומדויקת, תוך שילוב בין חזון האמן לבין עיצוב שמדבר אל הקהל.',
+        'about-text':      'עשור ויותר שאני עושה דבר אחד: מעצב למוזיקה. עטיפות אלבומים, זהויות ויזואליות, קמפיינים, עם חלק מהאמנים הכי נשמעים בישראל. אני עובד עם אנשים שלוקחים את המקצוע שלהם ברצינות, ואת שלי אני לוקח לא פחות. לא כל פרויקט הופך לאייקוני, אבל כל פרויקט מקבל ממני הכל.',
         'contact-heading': 'בואו נדבר',
         'send-btn':        'שלח',
         'clients-heading': 'כמה מהלקוחות היקרים שלי',
@@ -655,7 +659,7 @@
       document.documentElement.setAttribute('lang', lang);
 
       // Update text/html content
-      const htmlIds = ['logo-sub']; // elements using innerHTML
+      const htmlIds = []; // logo stays fixed, no innerHTML swaps
       const textIds = ['nav-home','nav-about','nav-ads','nav-contact','lang-toggle',
                        'about-label','about-heading','about-text',
                        'contact-heading','send-btn','clients-heading','footer-copy'];
