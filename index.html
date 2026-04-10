@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yoni Levy | Graphic Design for Musicians</title>
-  <meta name="description" content="Yoni Levy — graphic designer specializing in album covers, concert posters, and visual identity for musicians and bands. Based in Israel.">
-  <meta name="keywords" content="album cover designer, עיצוב עטיפות אלבומים, concert poster designer, music graphic design, Yoni Levy, yonilevy.design">
-  <meta property="og:title" content="Yoni Levy | Graphic Design for Musicians">
-  <meta property="og:description" content="Album covers, concert posters, and visual identity for musicians and bands.">
+  <title>יוני לוי | עיצוב אלבומים ועטיפות מוזיקה | Yoni Levy Album Design Israel</title>
+  <meta name="description" content="יוני לוי — מעצב גרפי ישראלי המתמחה בעיצוב אלבומים, עטיפות מוזיקה וזהות ויזואלית לאמנים. Yoni Levy — Israeli graphic designer specializing in album cover design, music identity, and concert posters.">
+  <meta name="keywords" content="עיצוב אלבומים, מעצב אלבומים ישראל, עיצוב עטיפות מוזיקה, מעצב אלבומים מוביל, album cover designer Israel, music graphic design, Yoni Levy, yonilevy.design">
+  <meta property="og:title" content="יוני לוי | עיצוב אלבומים | Yoni Levy Album Design">
+  <meta property="og:description" content="עיצוב אלבומים, עטיפות מוזיקה וזהות ויזואלית לאמנים מובילים בישראל. Album covers, concert posters, and visual identity for musicians.">
   <meta property="og:url" content="https://yonilevy.design">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://yonilevy.design">
@@ -16,10 +16,12 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Yoni Levy",
-    "jobTitle": "Graphic Designer",
-    "description": "Graphic designer specializing in album covers, concert posters, and visual identity for musicians and bands.",
+    "alternateName": "יוני לוי",
+    "jobTitle": "Graphic Designer / מעצב גרפי",
+    "description": "Israeli graphic designer specializing in album cover design, music visual identity, and concert posters. מעצב גרפי ישראלי המתמחה בעיצוב אלבומים ועטיפות מוזיקה.",
     "url": "https://yonilevy.design",
-    "knowsAbout": ["Album Cover Design", "Concert Poster Design", "Music Graphic Design", "Visual Identity"]
+    "knowsAbout": ["Album Cover Design", "עיצוב אלבומים", "עיצוב עטיפות מוזיקה", "Concert Poster Design", "Music Graphic Design", "Visual Identity", "זהות ויזואלית לאמנים"],
+    "address": { "@type": "PostalAddress", "addressCountry": "IL" }
   }
   </script>
   <!-- Google Analytics -->
@@ -126,6 +128,26 @@
       color: var(--black);
     }
 
+    /* ─── Language Toggle ─── */
+    .lang-btn {
+      background: none;
+      border: 1px solid #ccc;
+      font-family: var(--font);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--gray);
+      padding: 5px 11px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+      line-height: 1;
+    }
+
+    .lang-btn:hover {
+      border-color: var(--black);
+      color: var(--black);
+    }
+
     /* ─── Gallery Grid (Home) ─── */
     .gallery {
       display: grid;
@@ -149,6 +171,63 @@
 
     .gallery-item:hover img {
       transform: scale(1.04);
+    }
+
+    /* ─── About Section ─── */
+    .about-section {
+      padding: 90px 60px;
+      text-align: center;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+
+    .about-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .about-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 28px;
+      display: block;
+    }
+
+    .about-heading {
+      font-size: clamp(18px, 2.6vw, 30px);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--black);
+      line-height: 1.35;
+      margin-bottom: 32px;
+    }
+
+    .about-text {
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      line-height: 2;
+      color: #555;
+    }
+
+    /* Hebrew mode adjustments */
+    body.lang-he .about-inner {
+      direction: rtl;
+    }
+
+    body.lang-he .about-heading {
+      letter-spacing: 0;
+    }
+
+    body.lang-he .about-text {
+      letter-spacing: 0;
+    }
+
+    body.lang-he nav {
+      direction: rtl;
     }
 
     /* ─── Quote Section ─── */
@@ -259,6 +338,14 @@
       color: var(--white);
     }
 
+    body.lang-he .contact-section {
+      direction: rtl;
+    }
+
+    body.lang-he .send-btn {
+      align-self: flex-end;
+    }
+
     /* ─── Clients Section ─── */
     .clients-section {
       background: var(--light);
@@ -343,11 +430,10 @@
     @media (max-width: 768px) {
       header {
         padding: 0 20px;
-        height: 60px;
-        flex-wrap: wrap;
         height: auto;
         padding: 14px 20px;
         gap: 12px;
+        flex-wrap: wrap;
       }
 
       nav {
@@ -356,6 +442,10 @@
 
       .gallery {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-section {
+        padding: 60px 28px;
       }
 
       .quote-section {
@@ -381,58 +471,69 @@
     <div class="logo-wrap">
       <img
         src="images/6679be_168b0210bdae4201a99ed5335b2d316b~mv2.png"
-        alt="Yoni Levy Logo"
+        alt="Yoni Levy Logo — מעצב גרפי לאמנים"
       >
       <div class="logo-text">
         <span class="logo-name">YONi levy</span>
-        <span class="logo-sub">Graphic Design<br>for Musicians</span>
+        <span class="logo-sub" id="logo-sub">Graphic Design<br>for Musicians</span>
       </div>
     </div>
     <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="ads.html">Concert Ads</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="active" id="nav-home">Home</a>
+      <a href="#about" id="nav-about">About</a>
+      <a href="ads.html" id="nav-ads">Concert Ads</a>
+      <a href="#contact" id="nav-contact">Contact</a>
+      <button class="lang-btn" id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">עב</button>
     </nav>
   </header>
 
   <!-- ── Portfolio Gallery ── -->
   <section class="gallery">
-    <div class="gallery-item"><img src="images/6679be_9b240345dfe04234947ca0f1b034068f~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_0feae19581a74f39af1a227473d0400b~mv2.png" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_21e51a42bdb9452996d3323989a8e359~mv2.png" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_4377e5f72cff41e186b7c87cb57269e5~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_9101f75f5d3a4b9c835eee45f856d4d3~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_8718ef643dc54f6cacb912627675c4c2~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_73e8c120887f4115b1ed534066514f61~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_db2e963bca744e74807ceb1aefe632b1~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_db91f8ce6e284e3894fffbee2f594456~mv2.png" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_f9602f66714d496f8a0350390e657594~mv2.png" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_80e3d7ec86cd43478fcda5b3921a668c~mv2.png" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_6b773a6bf52d40c790d89c5a26b716db~mv2.png" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_aaebf68e028f4b1aaff95433f359a2ca~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_b66ad990c15a47d68e205b2b445bcc4a~mv2.png" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_5f43cb1e0b274b5f880efbf20cea3c47~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_ec29dcfdb9924346991922d38f5d3fa0~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_0c831f45f18544748edc2e164d15b27e~mv2.png" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_1fe0a554e9944f7792122b854f87dd53~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_ff901a9221e64ee998cba3d51ed09da5~mv2.png" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_91c3b7ae1aa1458cb8a458514aa7bc72~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_b0fb2242b31f43aab48f1db84e86d725~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_0f39a4a548ad4dda9055919c04883626~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_e480d3601397410a9320117ebe2f8d38~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_25cbd11e124f4c4c89a49cd505422d7f~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_cec8edf07c05499a9822497f42ec613b~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_68f021a1c7534c0dbc2395736cf8249f~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_d33f208f498540b48d38bb9249abe1b5~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_72b61c1845dd4752aed100f51080ad4d~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_0962391a3045494d878aeef73b725cc7~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_81991fcc0e1742c6a758e946cd79fc36~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_5e50b03d77c148cabf1d6933697c1056~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_787138cab4b24f2b931523d9756cce71~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_e1092252e36a40ecb2472fd47904ca2c~mv2.png" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_ae64d729bec0491b93096f112564ec9e~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_b6aef8a897a9479f816c5e7db182a1b6~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
-    <div class="gallery-item"><img src="images/6679be_db48dadc9d804677a7799892adc4a515~mv2.jpg" alt="Portfolio work" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_9b240345dfe04234947ca0f1b034068f~mv2.jpg" alt="עיצוב עטיפת אלבום — Yoni Levy" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_0feae19581a74f39af1a227473d0400b~mv2.png" alt="Album cover design Israel" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_21e51a42bdb9452996d3323989a8e359~mv2.png" alt="עיצוב אלבום מוזיקה ישראלית" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_4377e5f72cff41e186b7c87cb57269e5~mv2.jpg" alt="Music graphic design Israel" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_9101f75f5d3a4b9c835eee45f856d4d3~mv2.jpg" alt="עיצוב עטיפה לאלבום מוזיקה" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_8718ef643dc54f6cacb912627675c4c2~mv2.jpg" alt="Album artwork design" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_73e8c120887f4115b1ed534066514f61~mv2.jpg" alt="עיצוב גרפי לאמנים ישראלים" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_db2e963bca744e74807ceb1aefe632b1~mv2.jpg" alt="Concert poster design Israel" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_db91f8ce6e284e3894fffbee2f594456~mv2.png" alt="עיצוב אלבום — יוני לוי" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_f9602f66714d496f8a0350390e657594~mv2.png" alt="Music visual identity design" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_80e3d7ec86cd43478fcda5b3921a668c~mv2.png" alt="עטיפת אלבום — עיצוב גרפי" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_6b773a6bf52d40c790d89c5a26b716db~mv2.png" alt="Album cover art Israel" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_aaebf68e028f4b1aaff95433f359a2ca~mv2.jpg" alt="עיצוב עטיפות מוזיקה" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_b66ad990c15a47d68e205b2b445bcc4a~mv2.png" alt="Graphic design for musicians" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_5f43cb1e0b274b5f880efbf20cea3c47~mv2.jpg" alt="עיצוב זהות ויזואלית לאמנים" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_ec29dcfdb9924346991922d38f5d3fa0~mv2.jpg" alt="Album design portfolio Israel" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_0c831f45f18544748edc2e164d15b27e~mv2.png" alt="עיצוב אלבום ישראלי" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_1fe0a554e9944f7792122b854f87dd53~mv2.jpg" alt="Music branding Israel" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_ff901a9221e64ee998cba3d51ed09da5~mv2.png" alt="עטיפת מוזיקה — עיצוב" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_91c3b7ae1aa1458cb8a458514aa7bc72~mv2.jpg" alt="Israeli album cover designer" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_b0fb2242b31f43aab48f1db84e86d725~mv2.jpg" alt="עיצוב גרפי למוזיקה" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_0f39a4a548ad4dda9055919c04883626~mv2.jpg" alt="Album artwork Israel" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_e480d3601397410a9320117ebe2f8d38~mv2.jpg" alt="עיצוב אלבום — יוני לוי מעצב" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_25cbd11e124f4c4c89a49cd505422d7f~mv2.jpg" alt="Yoni Levy album design" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_cec8edf07c05499a9822497f42ec613b~mv2.jpg" alt="עיצוב עטיפת אלבום ישראלי" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_68f021a1c7534c0dbc2395736cf8249f~mv2.jpg" alt="Music packaging design" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_d33f208f498540b48d38bb9249abe1b5~mv2.jpg" alt="עיצוב גרפי — תעשיית המוזיקה" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_72b61c1845dd4752aed100f51080ad4d~mv2.jpg" alt="Album cover design portfolio" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_0962391a3045494d878aeef73b725cc7~mv2.jpg" alt="עיצוב אלבום וזהות ויזואלית" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_81991fcc0e1742c6a758e946cd79fc36~mv2.jpg" alt="Graphic designer for musicians Israel" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_5e50b03d77c148cabf1d6933697c1056~mv2.jpg" alt="עיצוב עטיפה — פרויקט מוזיקה" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_787138cab4b24f2b931523d9756cce71~mv2.jpg" alt="Album art graphic design" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_e1092252e36a40ecb2472fd47904ca2c~mv2.png" alt="עיצוב אלבום ישראל — יוני לוי" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_ae64d729bec0491b93096f112564ec9e~mv2.jpg" alt="Music visual design Israel" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_b6aef8a897a9479f816c5e7db182a1b6~mv2.jpg" alt="עיצוב גרפי לתקליטים" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/6679be_db48dadc9d804677a7799892adc4a515~mv2.jpg" alt="Album cover art design Israel" loading="lazy"></div>
+  </section>
+
+  <!-- ── About ── -->
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <span class="about-label" id="about-label">About</span>
+      <h2 class="about-heading" id="about-heading">Album Design. Music Identity. Israel.</h2>
+      <p class="about-text" id="about-text">Yoni Levy is an Israeli graphic designer specializing in album covers, music visual identity, and concert posters. With over a decade working alongside Israel's leading musicians and record labels — including NMC, Hed Arzi, and Kaspit — Yoni brings each artist's vision to life through bold, expressive design. Every project is approached with personal attention, merging the artist's world with visuals that speak to audiences.</p>
+    </div>
   </section>
 
   <!-- ── Quote ── -->
@@ -446,7 +547,7 @@
 
   <!-- ── Contact ── -->
   <section class="contact-section" id="contact">
-    <h2>Keep in touch</h2>
+    <h2 id="contact-heading">Keep in touch</h2>
     <!--
       To activate this form:
       1. Go to https://formspree.io and create a free account
@@ -458,30 +559,30 @@
       action="https://formspree.io/f/YOUR_FORM_ID"
       method="POST"
     >
-      <input type="text"  name="name"    placeholder="Name"                        required>
-      <input type="email" name="email"   placeholder="Email"                       required>
-      <input type="text"  name="subject" placeholder="Subject">
-      <textarea           name="message" placeholder="Type your message here...">  </textarea>
-      <button class="send-btn" type="submit">Send</button>
+      <input type="text"  name="name"    id="input-name"    placeholder="Name"                       required>
+      <input type="email" name="email"   id="input-email"   placeholder="Email"                      required>
+      <input type="text"  name="subject" id="input-subject"  placeholder="Subject">
+      <textarea           name="message" id="input-message"  placeholder="Type your message here..."></textarea>
+      <button class="send-btn" type="submit" id="send-btn">Send</button>
     </form>
   </section>
 
   <!-- ── Clients ── -->
   <section class="clients-section">
-    <h3>Some of My Dear Clients</h3>
+    <h3 id="clients-heading">Some of My Dear Clients</h3>
     <div class="clients-grid">
-      <img src="images/6679be_66bf0f6387d248338f875d57fdb09a69~mv2.png" alt="NMC">
-      <img src="images/6679be_be211a36ea324877be00d99c1229ab22~mv2.png" alt="Hed Arzi">
+      <img src="images/6679be_66bf0f6387d248338f875d57fdb09a69~mv2.png" alt="NMC — לקוח של יוני לוי">
+      <img src="images/6679be_be211a36ea324877be00d99c1229ab22~mv2.png" alt="Hed Arzi — הד ארצי">
       <img src="images/6679be_08d8d2409035449f921f3bababe63cde~mv2.png" alt="NMC Live">
       <img src="images/6679be_bf0f5d7fff08464694f7f0b07463b327~mv2.png" alt="Aroma Music">
       <img src="images/6679be_306166ddb26c4a55819300c9b46f84a4~mv2.png" alt="Kaspit">
-      <img src="images/6679be_172111be9be94bfe974ee9584edd8d39~mv2.png" alt="Yahalom">
+      <img src="images/6679be_172111be9be94bfe974ee9584edd8d39~mv2.png" alt="Yahalom — יהלום">
     </div>
   </section>
 
   <!-- ── Footer ── -->
   <footer>
-    <p class="footer-copy">©2025 by Yoni Levy. All rights Reserved.</p>
+    <p class="footer-copy" id="footer-copy">©2025 by Yoni Levy. All rights Reserved.</p>
     <div class="social-links">
       <a href="https://www.facebook.com/yonileelevy" target="_blank" rel="noopener" aria-label="Facebook">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -495,6 +596,87 @@
       </a>
     </div>
   </footer>
+
+  <!-- ── Language Toggle Script ── -->
+  <script>
+    const i18n = {
+      en: {
+        'logo-sub':        'Graphic Design<br>for Musicians',
+        'nav-home':        'Home',
+        'nav-about':       'About',
+        'nav-ads':         'Concert Ads',
+        'nav-contact':     'Contact',
+        'lang-toggle':     'עב',
+        'about-label':     'About',
+        'about-heading':   'Album Design. Music Identity. Israel.',
+        'about-text':      "Yoni Levy is an Israeli graphic designer specializing in album covers, music visual identity, and concert posters. With over a decade working alongside Israel's leading musicians and record labels — including NMC, Hed Arzi, and Kaspit — Yoni brings each artist's vision to life through bold, expressive design. Every project is approached with personal attention, merging the artist's world with visuals that speak to audiences.",
+        'contact-heading': 'Keep in touch',
+        'send-btn':        'Send',
+        'clients-heading': 'Some of My Dear Clients',
+        'footer-copy':     '©2025 by Yoni Levy. All rights Reserved.',
+        'input-name':      'Name',
+        'input-email':     'Email',
+        'input-subject':   'Subject',
+        'input-message':   'Type your message here...',
+      },
+      he: {
+        'logo-sub':        'עיצוב גרפי<br>לאמנים',
+        'nav-home':        'ראשי',
+        'nav-about':       'אודות',
+        'nav-ads':         'פרסומות קונצרט',
+        'nav-contact':     'צור קשר',
+        'lang-toggle':     'EN',
+        'about-label':     'אודות',
+        'about-heading':   'עיצוב אלבומים. זהות מוזיקלית. ישראל.',
+        'about-text':      'יוני לוי הוא מעצב גרפי ישראלי המתמחה בעיצוב אלבומים, עטיפות מוזיקה וזהות ויזואלית לאמנים. עם ניסיון של מעל עשור בתעשיית המוזיקה הישראלית, עיצב יוני עטיפות אלבומים ופוסטרים לאמנים המובילים בישראל — כולל שיתופי פעולה עם נמ״ק, הד ארצי וספקי מוזיקה מובילים נוספים. כל פרויקט מקבל גישה אישית ומדויקת, תוך שילוב בין חזון האמן לבין עיצוב שמדבר אל הקהל.',
+        'contact-heading': 'בואו נדבר',
+        'send-btn':        'שלח',
+        'clients-heading': 'כמה מהלקוחות היקרים שלי',
+        'footer-copy':     '©2025 יוני לוי. כל הזכויות שמורות.',
+        'input-name':      'שם',
+        'input-email':     'אימייל',
+        'input-subject':   'נושא',
+        'input-message':   'כתבו לי...',
+      }
+    };
+
+    let currentLang = 'en';
+
+    function toggleLang() {
+      currentLang = currentLang === 'en' ? 'he' : 'en';
+      applyLang(currentLang);
+    }
+
+    function applyLang(lang) {
+      const t = i18n[lang];
+
+      // Toggle body class for RTL CSS
+      document.body.classList.toggle('lang-he', lang === 'he');
+      document.documentElement.setAttribute('lang', lang);
+
+      // Update text/html content
+      const htmlIds = ['logo-sub']; // elements using innerHTML
+      const textIds = ['nav-home','nav-about','nav-ads','nav-contact','lang-toggle',
+                       'about-label','about-heading','about-text',
+                       'contact-heading','send-btn','clients-heading','footer-copy'];
+
+      htmlIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && t[id] !== undefined) el.innerHTML = t[id];
+      });
+
+      textIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && t[id] !== undefined) el.textContent = t[id];
+      });
+
+      // Update form placeholders
+      ['input-name','input-email','input-subject','input-message'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el && t[id] !== undefined) el.placeholder = t[id];
+      });
+    }
+  </script>
 
 </body>
 </html>
