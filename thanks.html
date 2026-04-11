@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Sent — Yoni Levy</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #1f1f1f;
+      --white: #ffffff;
+      --gray:  #8f8f8f;
+      --font:  'Josefin Sans', sans-serif;
+    }
+    body {
+      font-family: var(--font);
+      color: var(--black);
+      background: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      padding: 0 40px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+    .logo-wrap img { width: 54px; height: 54px; object-fit: contain; }
+    .logo-name {
+      font-size: 13px; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; line-height: 1;
+      -webkit-text-stroke: 0.5px var(--black);
+    }
+    .logo-sub {
+      font-size: 7px; font-weight: 400; letter-spacing: 0.08em;
+      text-transform: uppercase; color: #555; line-height: 1.6; margin-top: 4px;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 40px;
+    }
+    .check {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 32px;
+      color: var(--black);
+    }
+    h1 {
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      color: var(--gray);
+      line-height: 1.8;
+      max-width: 380px;
+      margin-bottom: 48px;
+    }
+    a.back-btn {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--black);
+      border: 1px solid var(--black);
+      padding: 12px 32px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    a.back-btn:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo-wrap">
+      <img src="images/6679be_168b0210bdae4201a99ed5335b2d316b~mv2.png" alt="Yoni Levy Logo">
+      <div>
+        <div class="logo-name">YONI LEVY</div>
+        <div class="logo-sub">Graphic Design<br>for Musicians</div>
+      </div>
+    </a>
+  </header>
+  <main>
+    <svg class="check" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M14 24.5L21 31.5L34 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <h1>Message Sent</h1>
+    <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+    <a href="index.html" class="back-btn">Back to portfolio</a>
+  </main>
+</body>
+</html>
