@@ -10,18 +10,58 @@
   <meta property="og:description" content="עיצוב אלבומים, עטיפות מוזיקה וזהות ויזואלית לאמנים מובילים בישראל. Album covers, concert posters, and visual identity for musicians.">
   <meta property="og:url" content="https://yonilevy.design">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yonilevy.design/images/6679be_9b240345dfe04234947ca0f1b034068f~mv2.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="Yoni Levy — Album Cover Design Portfolio">
+  <meta property="og:locale" content="he_IL">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yoni Levy | Album Design & Music Identity | Israel">
+  <meta name="twitter:description" content="Over a decade designing for music. Album covers, visual identities, concert campaigns for Israel's top artists.">
+  <meta name="twitter:image" content="https://yonilevy.design/images/6679be_9b240345dfe04234947ca0f1b034068f~mv2.jpg">
   <link rel="canonical" href="https://yonilevy.design">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Yoni Levy",
-    "alternateName": "יוני לוי",
-    "jobTitle": "Graphic Designer / מעצב גרפי",
-    "description": "Israeli graphic designer specializing in album cover design, music visual identity, and concert posters. מעצב גרפי ישראלי המתמחה בעיצוב אלבומים ועטיפות מוזיקה.",
-    "url": "https://yonilevy.design",
-    "knowsAbout": ["Album Cover Design", "עיצוב אלבומים", "עיצוב עטיפות מוזיקה", "Concert Poster Design", "Music Graphic Design", "Visual Identity", "זהות ויזואלית לאמנים"],
-    "address": { "@type": "PostalAddress", "addressCountry": "IL" }
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Yoni Levy",
+        "alternateName": "יוני לוי",
+        "jobTitle": "Graphic Designer / מעצב גרפי",
+        "description": "Israeli graphic designer specializing in album cover design, music visual identity, and concert posters. מעצב גרפי ישראלי המתמחה בעיצוב אלבומים ועטיפות מוזיקה.",
+        "url": "https://yonilevy.design",
+        "image": "https://yonilevy.design/images/6679be_168b0210bdae4201a99ed5335b2d316b~mv2.png",
+        "knowsAbout": ["Album Cover Design", "עיצוב אלבומים", "עיצוב עטיפות מוזיקה", "Concert Poster Design", "Music Graphic Design", "Visual Identity", "זהות ויזואלית לאמנים"],
+        "address": { "@type": "PostalAddress", "addressCountry": "IL" },
+        "sameAs": [
+          "https://www.facebook.com/yonileelevy",
+          "https://www.linkedin.com/in/ynilvy/"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "Yoni Levy — Music Graphic Design",
+        "alternateName": "יוני לוי עיצוב גרפי למוזיקה",
+        "url": "https://yonilevy.design",
+        "image": "https://yonilevy.design/images/6679be_168b0210bdae4201a99ed5335b2d316b~mv2.png",
+        "description": "Graphic design studio specializing in music: album covers, visual identity, and concert campaign design for musicians and labels in Israel.",
+        "founder": { "@type": "Person", "name": "Yoni Levy" },
+        "areaServed": { "@type": "Country", "name": "Israel" },
+        "serviceType": "Graphic Design",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Music Design Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Album Cover Design", "alternateName": "עיצוב עטיפת אלבום" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Music Visual Identity", "alternateName": "זהות ויזואלית לאמנים" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concert Poster & Campaign Design", "alternateName": "עיצוב מודעות קונצרט" } }
+          ]
+        },
+        "address": { "@type": "PostalAddress", "addressCountry": "IL" }
+      }
+    ]
   }
   </script>
   <!-- Google Analytics -->
@@ -222,7 +262,7 @@
       letter-spacing: 0;
     }
 
-    body.langthe .about-text {
+    body.lang-he .about-text {
       letter-spacing: 0;
     }
 
@@ -661,8 +701,8 @@
       // Update text/html content
       const htmlIds = []; // logo stays fixed, no innerHTML swaps
       const textIds = ['nav-home','nav-about','nav-ads','nav-contact','lang-toggle',
-                       'about-label','about-heading','about-text',
-                       'contact-heading','send-btn','clients-heading','footer-copy'];
+                        'about-label','about-heading','about-text',
+                        'contact-heading','send-btn','clients-heading','footer-copy'];
 
       htmlIds.forEach(id => {
         const el = document.getElementById(id);
