@@ -21,6 +21,9 @@
   <meta name="twitter:description" content="Over a decade designing for music. Album covers, visual identities, concert campaigns for Israel's top artists.">
   <meta name="twitter:image" content="https://yonilevy.design/images/6679be_9b240345dfe04234947ca0f1b034068f~mv2.jpg">
   <link rel="canonical" href="https://yonilevy.design">
+  <link rel="alternate" hreflang="he" href="https://yonilevy.design/">
+  <link rel="alternate" hreflang="en" href="https://yonilevy.design/">
+  <link rel="alternate" hreflang="x-default" href="https://yonilevy.design/">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -601,6 +604,7 @@
       <input type="hidden" name="_subject" value="New message from yonilevy.design">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://yonilevy.design/thanks.html">
       <input type="text"  name="name"    id="input-name"    placeholder="Name"                       required>
       <input type="email" name="email"   id="input-email"   placeholder="Email"                      required>
       <input type="text"  name="subject" id="input-subject"  placeholder="Subject">
@@ -699,8 +703,8 @@
       // Update text/html content
       const htmlIds = []; // logo stays fixed, no innerHTML swaps
       const textIds = ['nav-home','nav-about','nav-ads','nav-contact','lang-toggle',
-                        'about-label','about-heading','about-text',
-                        'contact-heading','send-btn','clients-heading','footer-copy'];
+                       'about-label','about-heading','about-text',
+                       'contact-heading','send-btn','clients-heading','footer-copy'];
 
       htmlIds.forEach(id => {
         const el = document.getElementById(id);
